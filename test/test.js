@@ -1,24 +1,16 @@
 // vanilla JS
 test = [1,2,3]
-[1, 2, 3].map(n => n + 1)
+require('react')
+
+// ES6
+const a = 1
 
 // JSX
-require('react')
 const profile = (
   <div>
     <img src="avatar.png" className="profile" />
   </div>
 )
-
-// ES6
-const a = 1
-let b = 2
-console.log(a, b)
-
-let colors = ['red', 'green', 'blue']
-for (const color of colors.reverse()) {
-  console.log(color)
-}
 
 // ES6 and react
 import React from 'react'

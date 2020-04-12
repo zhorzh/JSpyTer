@@ -28,11 +28,16 @@ env NODE_PATH=/opt/conda/lib
 copy ./package.json /home/jovyan/package.json
 workdir /home/jovyan
 run npm install
+copy ./.babelrc /home/jovyan/.babelrc
 
 # run jupyter
+env JUPYTER_ENABLE_LAB=1
+env JUPYTER_TOKEN=123
 user jovyan
 workdir /home/jovyan
 cmd jp-babel-notebook --ip=* --debug
 
 # use this line instead of the one above to run vanilla js
 # cmd ijs --ip=* --debug
+
+# expose 8888
